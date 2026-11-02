@@ -14,7 +14,7 @@
   import { formatBytes, formatDuration, formatLoad } from '../lib/format';
   import { locale, t } from '../lib/i18n/index.svelte';
 
-  const SOURCE_URL = 'https://github.com/weirui-kong/SupaCudy';
+  const SOURCE_URL = 'https://github.com/supacode-org/supacudy';
 
   let { refreshMs = 5000 }: { refreshMs?: number } = $props();
 
