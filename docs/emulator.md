@@ -1,6 +1,6 @@
 # 模拟器
 
-在本机用 QEMU 跑一台完整的 OpenWrt 虚拟机，装着 SupaCudy，周围用虚拟网卡和网络命名空间搭出"上游热点、手机、笔记本、NAS"，用来在没有真机的情况下开发和测试网络功能。
+在本机用 QEMU 跑一台完整的 OpenWrt 虚拟机，装着 Supa Cudy，周围用虚拟网卡和网络命名空间搭出"上游热点、手机、笔记本、NAS"，用来在没有真机的情况下开发和测试网络功能。
 
 ```bash
 scripts/emulator.sh build          # 打包并构建模拟器镜像（第一次或改了代码后）
@@ -16,7 +16,7 @@ scripts/emulator.sh console        # 看串口启动日志
 
 | 宿主机 | 虚拟机 | 用途 |
 |---|---|---|
-| 127.0.0.1:8088 | 80 | SupaCudy 和 LuCI |
+| 127.0.0.1:8088 | 80 | Supa Cudy 和 LuCI |
 | 127.0.0.1:2222 | 22 | SSH |
 | 127.0.0.1:3000 | 3000 | AdGuard Home 页面 |
 
@@ -38,7 +38,7 @@ scripts/emulator.sh console        # 看串口启动日志
                          │ （QEMU 端口转发）
                     eth1 mgmt 10.250.3.15
                          │
-  QEMU NAT ── eth0 WAN ──┤ SupaCudy 路由器 ├── br-lan 192.168.200.1/24
+  QEMU NAT ── eth0 WAN ──┤ Supa Cudy 路由器 ├── br-lan 192.168.200.1/24
   10.250.2.0/24          │                 │      ├── laptop（有线，Work-Laptop）
   （可上网）              │                 │      └── nas（有线，Home-NAS）
                          │                 │

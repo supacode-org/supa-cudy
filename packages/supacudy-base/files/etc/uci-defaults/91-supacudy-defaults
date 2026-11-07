@@ -1,8 +1,8 @@
 #!/bin/sh
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
-# SupaCudy's factory defaults: LAN 192.168.200.1 (192.168.1.x collides with
+# Supa Cudy's factory defaults: LAN 192.168.200.1 (192.168.1.x collides with
 # many modems), an open "SupaCudy" Wi-Fi so a phone can reach the setup
 # wizard without a cable, and the CN regulatory domain for its channels and
 # power. Applied only to OpenWrt's own fresh defaults, so

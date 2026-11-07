@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 //
 // AdGuard Home as the router's DNS: clients ask AdGuard Home on port 53,
@@ -25,7 +25,7 @@ const DNS_OPTION = '6,0.0.0.0';
 // One password for everything with a login: AdGuard Home's user is root
 // with the admin password. Its API needs that login too, so the password
 // is kept for curl, and the root shadow entry it belongs to is recorded to
-// notice a change made outside SupaCudy. All root-only.
+// notice a change made outside Supa Cudy. All root-only.
 const LOGIN_DIR = '/etc/supacudy';
 const CURL_AUTH = `${LOGIN_DIR}/adguard.curl`;
 const LOGIN_HASH = `${LOGIN_DIR}/adguard.bcrypt`;
@@ -208,7 +208,7 @@ function web_state() {
 		enabled: open && length(w.users) > 0,
 		user: w.users[0] ?? null,
 		port: WEB_PORT,
-		// False once the admin password changed without SupaCudy (passwd,
+		// False once the admin password changed without Supa Cudy (passwd,
 		// LuCI): AdGuard Home still has the old one until it is entered here.
 		synced: recorded != null && recorded == root_shadow_hash() && WEB_USER in w.users
 	};
@@ -295,7 +295,7 @@ function adguard_get() {
 		installed: installed(),
 		enabled: on,
 		running: status?.running ?? false,
-		// The page has a login we do not know (set up outside SupaCudy).
+		// The page has a login we do not know (set up outside Supa Cudy).
 		locked: on && !status && web.enabled && !access(CURL_AUTH),
 		// The rescue watcher answers DNS without filtering while it is down.
 		fallback: fallback_active(),

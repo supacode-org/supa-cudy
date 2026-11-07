@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 //
 // Connected devices: who is on the network, how, and with which policy.

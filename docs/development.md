@@ -8,7 +8,7 @@
 - Node.js 24。
 - shellcheck（`brew install shellcheck`，Linux 上 `apt install shellcheck`），lint 测试需要。
 - QEMU（`brew install qemu`），模拟器需要。
-- 调试真机时，一台刷了 SupaCudy 或 OpenWrt 24.10 的 TR3000。
+- 调试真机时，一台刷了 Supa Cudy 或 OpenWrt 24.10 的 TR3000。
 
 ## 第一次克隆后
 

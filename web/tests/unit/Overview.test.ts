@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { beforeEach, describe, expect, it, vi } from 'vitest';
@@ -74,7 +74,7 @@ describe('Overview page', () => {
 
     await waitFor(() => expect(value('Model')).toBe('Cudy TR3000 v1'));
     expect(value('OpenWrt')).toBe('24.10.8 (r29233-443ec4032a)');
-    expect(value('SupaCudy')).toBe('0.1.0-r1');
+    expect(value('Supa Cudy')).toBe('0.1.0-r1');
     expect(value('Up time')).toBe('2 d 3 h');
     expect(value('Load average')).toBe('0.12 / 0.30 / 1.50');
     expect(value('CPU cores')).toBe('2');

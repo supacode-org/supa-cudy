@@ -1,5 +1,5 @@
 <!--
-  Copyright 2026 SupaCudy contributors
+  Copyright 2026 Supa Cudy contributors
   SPDX-License-Identifier: Apache-2.0
 -->
 <script lang="ts">
@@ -14,7 +14,7 @@
   import { formatBytes, formatDuration, formatLoad } from '../lib/format';
   import { locale, t } from '../lib/i18n/index.svelte';
 
-  const SOURCE_URL = 'https://github.com/supacode-org/supacudy';
+  const SOURCE_URL = 'https://github.com/supacode-org/supa-cudy';
 
   let { refreshMs = 5000 }: { refreshMs?: number } = $props();
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 # Emulator tests for the emulated network itself, which every feature test
@@ -34,9 +34,9 @@ eventually "router scan sees both upstream hotspots" \
 eventually "upstream reaches the WAN gateway through the uplink" \
 	"ip netns exec upstream ping -c1 -W3 10.250.2.2"
 
-eventually "SupaCudy UI is served" \
-	"wget -q -O - http://127.0.0.1/supacudy/ | grep -q '<title>SupaCudy</title>'"
-if curl -fsS "http://127.0.0.1:$EMU_HTTP_PORT/supacudy/" | grep -q '<title>SupaCudy</title>'; then
+eventually "Supa Cudy UI is served" \
+	"wget -q -O - http://127.0.0.1/supacudy/ | grep -q '<title>Supa Cudy</title>'"
+if curl -fsS "http://127.0.0.1:$EMU_HTTP_PORT/supacudy/" | grep -q '<title>Supa Cudy</title>'; then
 	ok "UI reachable from the host on 127.0.0.1"
 else
 	not_ok "UI reachable from the host on 127.0.0.1"

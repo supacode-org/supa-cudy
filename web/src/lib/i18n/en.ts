@@ -1,10 +1,10 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 
 // The source of truth for message keys; zh-CN.ts must mirror this shape.
 const en = {
   app: {
-    name: 'SupaCudy',
+    name: 'Supa Cudy',
     skip_to_content: 'Skip to content',
   },
   nav: {
@@ -50,8 +50,8 @@ const en = {
     model: 'Model',
     board: 'Board',
     openwrt: 'OpenWrt',
-    supacudy: 'SupaCudy',
-    source: 'SupaCudy on GitHub',
+    supacudy: 'Supa Cudy',
+    source: 'Supa Cudy on GitHub',
     system: 'System',
     uptime: 'Up time',
     load: 'Load average',
@@ -441,7 +441,7 @@ const en = {
     advanced_hint: 'LuCI, the standard OpenWrt interface, offers every option. Changes made there can conflict with this app.',
     open_luci: 'Open LuCI',
     firmware: 'Firmware',
-    firmware_hint: 'Upload a SupaCudy or OpenWrt sysupgrade image made for this router. The router checks it before anything is installed.',
+    firmware_hint: 'Upload a Supa Cudy or OpenWrt sysupgrade image made for this router. The router checks it before anything is installed.',
     choose_file: 'Choose a firmware file',
     choose_other: 'Choose another file',
     uploading: 'Uploading {name}',
@@ -478,7 +478,7 @@ const en = {
     back_hint: 'Log in again to continue.',
   },
   setup: {
-    welcome: 'Welcome to SupaCudy',
+    welcome: 'Welcome to Supa Cudy',
     welcome_hint: 'A few steps and your router is ready. You can change everything later.',
     default_hint: 'This router still uses the factory login: user root, password {password}. Choose your own password in the next step. It protects this page, SSH and AdGuard Home.',
     fresh_hint: 'This router has no admin password yet. Set one up in the next step so nobody else can change its settings.',
@@ -817,7 +817,7 @@ const en = {
     disable_confirm: 'Turn off AdGuard Home?',
     disable_consequence: 'Ads and trackers are no longer blocked for any device on your network.',
     missing: 'AdGuard Home is not installed on this router.',
-    locked: 'AdGuard Home has a login that was set up outside SupaCudy, so its settings cannot be read here. Set the password of its page again below.',
+    locked: 'AdGuard Home has a login that was set up outside Supa Cudy, so its settings cannot be read here. Set the password of its page again below.',
     web_title: 'AdGuard Home page',
     web_hint: 'AdGuard Home has its own page with everything not shown here, such as the query log and per-device settings. Changes made there show up here too.',
     web_on: 'Turn on its page',
@@ -830,7 +830,7 @@ const en = {
     web_password: 'Admin password',
     web_password_same: 'Same as this page',
     web_sync: 'Enter admin password',
-    web_unsynced: 'The admin password was changed outside SupaCudy, so the AdGuard Home page still uses the old one. Enter the current admin password to update it.',
+    web_unsynced: 'The admin password was changed outside Supa Cudy, so the AdGuard Home page still uses the old one. Enter the current admin password to update it.',
     web_dialog_hint: 'One password for everything: AdGuard Home uses the same user and password as this page and SSH. The page opens on port 3000 of this router, for devices on your network only.',
   },
   uplinks: {
@@ -883,8 +883,8 @@ const en = {
   },
   luci: {
     title: 'Open native OpenWrt',
-    message: 'LuCI, the native OpenWrt interface, opens in a new window. It has every setting, including ones SupaCudy does not show.',
-    consequence: 'Changes made in native OpenWrt can stop the router from starting or break its network. SupaCudy cannot guarantee that it keeps working after them.',
+    message: 'LuCI, the native OpenWrt interface, opens in a new window. It has every setting, including ones Supa Cudy does not show.',
+    consequence: 'Changes made in native OpenWrt can stop the router from starting or break its network. Supa Cudy cannot guarantee that it keeps working after them.',
     confirm: 'Open LuCI',
   },
   time: {

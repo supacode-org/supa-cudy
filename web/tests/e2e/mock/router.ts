@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 
 // An in-memory stand-in for the router's /ubus endpoint, so the UI tests run

@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 //
 // Dynamic DNS through ddns-scripts and a third-party provider: keeps a name

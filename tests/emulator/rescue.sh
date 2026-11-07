@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 # Emulator tests for rescue mode. The watcher is stopped and ticked by hand
@@ -34,7 +34,7 @@ timed check "the second one starts rescue DHCP" \
 	 ubus call supacudy rescue_get | grep -q '\"address\": \"192.168.200.1\"'"
 timed eventually "the laptop gets a rescue address and opens the admin page" \
 	"$RENEW_LAPTOP; sleep 3; $LAPTOP ip -4 addr show eth0 | grep -q 'inet 192.168.200.' &&
-	 $LAPTOP uclient-fetch -q -O - http://192.168.200.1/supacudy/ | grep -q '<title>SupaCudy'"
+	 $LAPTOP uclient-fetch -q -O - http://192.168.200.1/supacudy/ | grep -q '<title>Supa Cudy'"
 timed check "the main router comes back" "ip link set eth0 up && sleep 5"
 timed check "rescue mode ends after two good checks" \
 	"$TICK && $TICK && grep -q '\"active\": *false' $STATE && ! ip -4 addr show br-lan | grep -q 192.168.200.1 &&

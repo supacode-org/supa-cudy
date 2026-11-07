@@ -1,6 +1,6 @@
 {
 	"supacudy": {
-		"description": "SupaCudy web UI",
+		"description": "Supa Cudy web UI",
 		"read": {
 			"ubus": {
 				"session": [
@@ -116,7 +116,7 @@
 		}
 	},
 	"unauthenticated": {
-		"description": "SupaCudy first-run greeting before login",
+		"description": "Supa Cudy first-run greeting before login",
 		"read": {
 			"ubus": {
 				"supacudy": [

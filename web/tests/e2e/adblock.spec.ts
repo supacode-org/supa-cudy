@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Page } from '@playwright/test';
@@ -151,7 +151,7 @@ test.describe('ad blocking', () => {
     await expect(page.getByRole('dialog', { name: m.adblock.web_title })).toBeHidden();
   });
 
-  test('asks for the admin password after it was changed outside SupaCudy', async ({ page, router }, testInfo) => {
+  test('asks for the admin password after it was changed outside Supa Cudy', async ({ page, router }, testInfo) => {
     const m = messages(testInfo);
     router.adguard.web = { enabled: true, user: 'root', port: 3000, synced: false };
     await page.reload();

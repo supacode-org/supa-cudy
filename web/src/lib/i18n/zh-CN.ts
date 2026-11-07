@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { MessageShape } from './types';
@@ -6,7 +6,7 @@ import type en from './en';
 
 const zhCN: MessageShape<typeof en> = {
   app: {
-    name: 'SupaCudy',
+    name: 'Supa Cudy',
     skip_to_content: '跳到主要内容',
   },
   nav: {
@@ -42,7 +42,7 @@ const zhCN: MessageShape<typeof en> = {
     wrong_password: '密码错误，请重试。',
   },
   overview: {
-    source: 'SupaCudy 的 GitHub 页面',
+    source: 'Supa Cudy 的 GitHub 页面',
     storage: '存储空间',
     topology: '网络拓扑',
     this_router: '本路由器',
@@ -53,7 +53,7 @@ const zhCN: MessageShape<typeof en> = {
     model: '型号',
     board: '板型',
     openwrt: 'OpenWrt',
-    supacudy: 'SupaCudy',
+    supacudy: 'Supa Cudy',
     system: '系统',
     uptime: '运行时间',
     load: '平均负载',
@@ -443,7 +443,7 @@ const zhCN: MessageShape<typeof en> = {
     advanced_hint: 'LuCI 是 OpenWrt 的标准界面，提供全部选项。在其中所做的修改可能与本应用冲突。',
     open_luci: '打开 LuCI',
     firmware: '固件',
-    firmware_hint: '上传适用于本路由器的 SupaCudy 或 OpenWrt sysupgrade 固件。安装前路由器会先进行校验。',
+    firmware_hint: '上传适用于本路由器的 Supa Cudy 或 OpenWrt sysupgrade 固件。安装前路由器会先进行校验。',
     choose_file: '选择固件文件',
     choose_other: '选择其他文件',
     uploading: '正在上传 {name}',
@@ -480,7 +480,7 @@ const zhCN: MessageShape<typeof en> = {
     back_hint: '请重新登录以继续。',
   },
   setup: {
-    welcome: '欢迎使用 SupaCudy',
+    welcome: '欢迎使用 Supa Cudy',
     welcome_hint: '只需几步即可完成设置，之后随时可以修改。',
     default_hint: '这台路由器仍在使用出厂登录信息：用户名 root，密码 {password}。请在下一步设置你自己的密码，它同时用于本页面、SSH 和 AdGuard Home。',
     fresh_hint: '这台路由器还没有管理密码。请在下一步设置，以免他人更改设置。',
@@ -819,7 +819,7 @@ const zhCN: MessageShape<typeof en> = {
     disable_confirm: '要关闭 AdGuard Home 吗？',
     disable_consequence: '网络中所有设备将不再拦截广告和跟踪器。',
     missing: '这台路由器没有安装 AdGuard Home。',
-    locked: 'AdGuard Home 的登录是在 SupaCudy 之外设置的，这里无法读取它的设置。请在下方重新设置其页面密码。',
+    locked: 'AdGuard Home 的登录是在 Supa Cudy 之外设置的，这里无法读取它的设置。请在下方重新设置其页面密码。',
     web_title: 'AdGuard Home 页面',
     web_hint: 'AdGuard Home 有自己的页面，包含这里没有的功能，例如查询日志和按设备设置。在那里所做的修改也会显示在这里。',
     web_on: '开启其页面',
@@ -832,7 +832,7 @@ const zhCN: MessageShape<typeof en> = {
     web_password: '管理密码',
     web_password_same: '与本页面相同',
     web_sync: '输入管理密码',
-    web_unsynced: '管理密码是在 SupaCudy 之外修改的，AdGuard Home 页面仍使用旧密码。请输入当前的管理密码以更新它。',
+    web_unsynced: '管理密码是在 Supa Cudy 之外修改的，AdGuard Home 页面仍使用旧密码。请输入当前的管理密码以更新它。',
     web_dialog_hint: '所有登录使用同一个密码：AdGuard Home 与本页面和 SSH 使用相同的用户名和密码。页面在这台路由器的 3000 端口打开，仅限你网络中的设备访问。',
   },
   uplinks: {
@@ -885,8 +885,8 @@ const zhCN: MessageShape<typeof en> = {
   },
   luci: {
     title: '打开原生 OpenWrt',
-    message: '将在新窗口中打开原生 OpenWrt 界面 LuCI。它包含所有设置，包括 SupaCudy 没有提供的选项。',
-    consequence: '在原生 OpenWrt 中所做的修改可能导致路由器无法启动或网络异常，SupaCudy 不保证修改后仍能正常工作。',
+    message: '将在新窗口中打开原生 OpenWrt 界面 LuCI。它包含所有设置，包括 Supa Cudy 没有提供的选项。',
+    consequence: '在原生 OpenWrt 中所做的修改可能导致路由器无法启动或网络异常，Supa Cudy 不保证修改后仍能正常工作。',
     confirm: '打开 LuCI',
   },
   time: {

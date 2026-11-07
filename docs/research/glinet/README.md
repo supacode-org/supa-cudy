@@ -1,6 +1,6 @@
 # GL.iNet 管理界面拆解
 
-本目录记录对 GL.iNet 4.x 管理界面的观察：页面结构、交互方式和功能清单，作为 SupaCudy 产品设计的参考。这里只描述"它做了什么、怎么组织的"，SupaCudy 的实现不复用其任何代码、图标、图片或原文案（见 [产品规则](../../rules/product.md)）。
+本目录记录对 GL.iNet 4.x 管理界面的观察：页面结构、交互方式和功能清单，作为 Supa Cudy 产品设计的参考。这里只描述"它做了什么、怎么组织的"，Supa Cudy 的实现不复用其任何代码、图标、图片或原文案（见 [产品规则](../../rules/product.md)）。
 
 ## 观察环境
 
@@ -28,7 +28,7 @@
 | [features/applications.md](features/applications.md) | 应用：软件包、动态 DNS、GoodCloud |
 | [features/network.md](features/network.md) | 网络：防火墙、多 WAN、LAN、DNS、工作模式、IPv6、MAC、旁路由、IGMP |
 | [features/system.md](features/system.md) | 系统：概要、升级、定时任务、密码、时区、按键、日志、重置、LuCI |
-| [supacudy-mapping.md](supacudy-mapping.md) | 对照 SupaCudy：优先级、OpenWrt 实现方式、我们打算做得不一样的地方 |
+| [supacudy-mapping.md](supacudy-mapping.md) | 对照 Supa Cudy：优先级、OpenWrt 实现方式、我们打算做得不一样的地方 |
 
 调研时截取的界面截图版权属于 GL.iNet，不放进本仓库。
 

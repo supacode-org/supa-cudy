@@ -1,6 +1,6 @@
-# 对照 SupaCudy
+# 对照 Supa Cudy
 
-把观察到的功能逐项映射到 SupaCudy：做不做、什么时候做、用 OpenWrt 的什么实现、哪里打算做得不一样。
+把观察到的功能逐项映射到 Supa Cudy：做不做、什么时候做、用 OpenWrt 的什么实现、哪里打算做得不一样。
 
 优先级：**P0** 阶段 1（MVP），**P1** 阶段 2，**P2** 阶段 3，**—** 不做。
 
@@ -14,11 +14,11 @@
 | 闪存 | 16MB | 128MB / 256MB |
 | 拨动开关 | 有 | 待真机确认 |
 
-所以 SupaCudy 的无线页要按"频段 × 主 / 访客"做 4 个入口，并且有足够空间装 AdGuard Home、Tailscale 等应用。
+所以 Supa Cudy 的无线页要按"频段 × 主 / 访客"做 4 个入口，并且有足够空间装 AdGuard Home、Tailscale 等应用。
 
 ## 全局
 
-| GL 的做法 | 优先级 | SupaCudy |
+| GL 的做法 | 优先级 | Supa Cudy |
 |---|---|---|
 | 左侧导航 + 卡片式内容区 | P0 | 保留思路；宽屏用双栏利用右侧空白，手机端用底部或抽屉导航，按产品规则单独设计手机布局 |
 | 首页拓扑图（上网方式 → 路由器 → 客户端） | P0 | 保留，这是最好的"一眼看懂"设计；手机端做成竖向的状态卡 |
@@ -63,7 +63,7 @@
 | 禁止上网 | P0 | firewall4 |
 | 限速 | P1 | nftables / tc |
 | 随机 MAC 提示 | P0 | 借鉴 |
-| 一键固定 IP（DHCP 保留） | P0 | GL 需要去 LAN 页手填，SupaCudy 在客户端菜单直接提供 |
+| 一键固定 IP（DHCP 保留） | P0 | GL 需要去 LAN 页手填，Supa Cudy 在客户端菜单直接提供 |
 
 ## VPN
 
@@ -104,7 +104,7 @@
 
 | 功能 | 优先级 | 备注 |
 |---|---|---|
-| 软件包管理 | — | 交给 LuCI；SupaCudy 只做精选应用的开关 |
+| 软件包管理 | — | 交给 LuCI；Supa Cudy 只做精选应用的开关 |
 | AdGuard Home | P1 | |
 | Tailscale、ZeroTier | P2 | 只做 Tailscale |
 | DDNS | P2 | 用 ddns-scripts 接第三方服务，不做自有云服务 |

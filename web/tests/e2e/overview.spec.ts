@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { expect, expectPageQuality, fill, loginAndWait, messages, test } from './helpers';
@@ -29,7 +29,7 @@ test.describe('overview', () => {
     await expect(page.getByText(m.overview.source, { exact: true })).toBeHidden();
     await expect(link.locator('svg')).toBeVisible();
     await expect(link).not.toContainText('github.com');
-    await expect(link).toHaveAttribute('href', 'https://github.com/supacode-org/supacudy');
+    await expect(link).toHaveAttribute('href', 'https://github.com/supacode-org/supa-cudy');
     await expect(link).toHaveAttribute('target', '_blank');
     await expect(link).toHaveAttribute('rel', /noopener/);
   });

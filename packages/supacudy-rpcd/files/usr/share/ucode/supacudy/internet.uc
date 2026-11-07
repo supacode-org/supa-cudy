@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 //
 // Ways to reach the internet: the Ethernet WAN and the Wi-Fi repeater.

@@ -13,10 +13,10 @@ uhttpd ── /ubus ── rpcd（会话、ACL 权限）
 ## 原则
 
 1. **不 fork OpenWrt。** 底座是官方发布版，版本号只在 `config/openwrt.env` 里写一次。我们的代码全部以 feed 的形式放在 `packages/`。
-2. **配置的唯一来源是 UCI。** SupaCudy 不自己存一份配置，所有设置最终都写进 `/etc/config/*`，所以在 LuCI 里改和在 SupaCudy 里改，看到的是同一份数据。
+2. **配置的唯一来源是 UCI。** Supa Cudy 不自己存一份配置，所有设置最终都写进 `/etc/config/*`，所以在 LuCI 里改和在 Supa Cudy 里改，看到的是同一份数据。
 3. **API 按任务设计，不按配置文件设计。** 前端调用的是"连接这个 WiFi 做中继""导入这份 WireGuard 配置"这样的高层操作；拆成哪些 UCI 改动、要重启哪些服务，由 rpcd 插件负责。
 4. **软件包与 CPU 架构无关。** 只用前端静态文件、ucode 和 shell，打包为 `PKGARCH:=all`，不需要交叉编译，同版本 OpenWrt 的其他设备也能装。
-5. **LuCI 始终保留。** SupaCudy 不覆盖的设置，用户随时可以去 LuCI 里改。http://路由器/ 默认打开 SupaCudy（`supacudy-ui` 的 `93-supacudy-ui` 让 uhttpd 先找 `/www/supacudy-start.html`，LuCI 的 `/www/index.html` 不动）；侧边栏左下角和“更多”页有“原生 OpenWrt”入口，打开前提示那里的修改可能导致无法启动或网络异常、不在保证范围内。
+5. **LuCI 始终保留。** Supa Cudy 不覆盖的设置，用户随时可以去 LuCI 里改。http://路由器/ 默认打开 Supa Cudy（`supacudy-ui` 的 `93-supacudy-ui` 让 uhttpd 先找 `/www/supacudy-start.html`，LuCI 的 `/www/index.html` 不动）；侧边栏左下角和“更多”页有“原生 OpenWrt”入口，打开前提示那里的修改可能导致无法启动或网络异常、不在保证范围内。
 
 ## 三个软件包
 
@@ -49,9 +49,9 @@ uhttpd ── /ubus ── rpcd（会话、ACL 权限）
 ## AdGuard Home
 
 - 链路：设备 → AdGuard Home（53 端口）→ dnsmasq（5353 端口）→ 上游。dnsmasq 照常负责本地主机名、DNS 页面的各种模式和 VPN 的 DNS。
-- **AdGuard Home 自己的配置是唯一来源**，这是原则 2 的例外：UCI 里只存“是否作为路由器的 DNS”（`supacudy.adguard.enabled`）。防护开关、拦截列表、自定义规则和统计都通过它在 127.0.0.1:3000 的 API 实时读写（`curl`），在它自己的页面里做的修改会直接显示在 SupaCudy 里，也不会被覆盖。读不到时返回 null，界面不显示猜测的值。
+- **AdGuard Home 自己的配置是唯一来源**，这是原则 2 的例外：UCI 里只存“是否作为路由器的 DNS”（`supacudy.adguard.enabled`）。防护开关、拦截列表、自定义规则和统计都通过它在 127.0.0.1:3000 的 API 实时读写（`curl`），在它自己的页面里做的修改会直接显示在 Supa Cudy 里，也不会被覆盖。读不到时返回 null，界面不显示猜测的值。
 - `/etc/adguardhome.yaml` 只在不存在时生成一次初始内容，之后归 AdGuard Home 管理。
-- **统一密码**：AdGuard Home 的用户是 root，密码就是管理密码。每次在 SupaCudy 里改管理密码（`password_set`），浏览器同时用 bcryptjs 算出 bcrypt 哈希（路由器上没有可用的工具）一起发送；路由器改 root 密码后停掉 AdGuard Home，只按行改 YAML 里的 `users`，再启动。它的 API 也因此需要登录，所以明文密码另存在只有 root 可读的 `/etc/supacudy/adguard.curl`，供 `curl -K` 使用，不出现在命令行和日志里。同时记录当时 root 的 shadow 记录；之后发现不一致（在 `passwd` 或 LuCI 里改了密码），界面会请用户输入一次当前密码来同步。
+- **统一密码**：AdGuard Home 的用户是 root，密码就是管理密码。每次在 Supa Cudy 里改管理密码（`password_set`），浏览器同时用 bcryptjs 算出 bcrypt 哈希（路由器上没有可用的工具）一起发送；路由器改 root 密码后停掉 AdGuard Home，只按行改 YAML 里的 `users`，再启动。它的 API 也因此需要登录，所以明文密码另存在只有 root 可读的 `/etc/supacudy/adguard.curl`，供 `curl -K` 使用，不出现在命令行和日志里。同时记录当时 root 的 shadow 记录；之后发现不一致（在 `passwd` 或 LuCI 里改了密码），界面会请用户输入一次当前密码来同步。
 - **打开它自己的页面**：只把 YAML 里的 `http.address` 在 127.0.0.1:3000 和 0.0.0.0:3000 之间切换。WAN 区默认拒绝入站，页面只在局域网可达。
 
 ## Tailscale

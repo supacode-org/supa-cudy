@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 # Emulator tests for the operating mode. In access point mode the WAN port

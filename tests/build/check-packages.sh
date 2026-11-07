@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 # Build tests: inspect the .ipk files in out/packages/ without installing them.
@@ -140,7 +140,7 @@ sys.exit(files != {"/tmp/firmware.bin": ["write"]} or "file" in acl.get("read", 
 check "ui: depends on supacudy-rpcd"   depends_on supacudy-ui supacudy-rpcd
 check "ui: depends on uhttpd-mod-ubus" depends_on supacudy-ui uhttpd-mod-ubus
 check "ui: ships /www/supacudy/index.html" has_file supacudy-ui www/supacudy/index.html
-check "ui: ships the start page that opens SupaCudy" \
+check "ui: ships the start page that opens Supa Cudy" \
 	bash -c "grep -q 'URL=supacudy/' '$WORK/supacudy-ui/data/www/supacudy-start.html'"
 check "ui: start page script is executable" is_exec supacudy-ui etc/uci-defaults/93-supacudy-ui
 check "ui: does not replace LuCI's /www/index.html" bash -c "[ ! -e '$WORK/supacudy-ui/data/www/index.html' ]"

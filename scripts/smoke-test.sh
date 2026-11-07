@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 # Install the built packages into an official OpenWrt rootfs container
 # (same OpenWrt version, native architecture of this machine) and check that
-# the web UI can log in and call the SupaCudy API. No router needed. The
+# the web UI can log in and call the Supa Cudy API. No router needed. The
 # packages are architecture independent, so a generic rootfs is enough.
 #
 #   scripts/smoke-test.sh            run the checks, then remove the container
@@ -78,7 +78,7 @@ docker run -d --name "$NAME" -p "127.0.0.1:$PORT:80" \
 docker exec -e PASSWORD="$PASSWORD" "$NAME" sh -euc '
 	mkdir -p /var/lock /var/run /tmp/sysinfo
 	echo "supacudy,smoke-test" > /tmp/sysinfo/board_name
-	echo "SupaCudy smoke test" > /tmp/sysinfo/model
+	echo "Supa Cudy smoke test" > /tmp/sysinfo/model
 
 	# Every dependency is already installed, so nothing is downloaded.
 	opkg install /supacudy/*.ipk >/dev/null
@@ -117,7 +117,7 @@ for _ in $(seq 20); do
 done
 
 echo "==> GET /supacudy/"
-curl -fsS "$URL/supacudy/" | grep -q '<title>SupaCudy</title>' || fail "UI page not served"
+curl -fsS "$URL/supacudy/" | grep -q '<title>Supa Cudy</title>' || fail "UI page not served"
 
 # The UI logs in through the login CGI, which logs failures with the address
 # for the login protection; anonymous session.login on /ubus is closed.
@@ -145,7 +145,7 @@ echo "==> supacudy.info"
 INFO="$(rpc "$SESSION" supacudy info)"
 echo "    $INFO"
 echo "$INFO" | grep -q "\"openwrt\":\"$OPENWRT_VERSION\"" || fail "unexpected supacudy.info result"
-echo "$INFO" | grep -q '"version":"0\.' || fail "SupaCudy version missing"
+echo "$INFO" | grep -q '"version":"0\.' || fail "Supa Cudy version missing"
 
 echo "==> supacudy.status"
 STATUS="$(rpc "$SESSION" supacudy status)"

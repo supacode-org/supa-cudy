@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { supacudy } from './core';
@@ -17,7 +17,7 @@ export interface AdguardState {
   installed: boolean;
   enabled: boolean;
   running: boolean;
-  /** Its page has a login SupaCudy does not know, so nothing can be read. */
+  /** Its page has a login Supa Cudy does not know, so nothing can be read. */
   locked: boolean;
   /** AdGuard Home stopped and the router answers DNS without filtering. */
   fallback: boolean;

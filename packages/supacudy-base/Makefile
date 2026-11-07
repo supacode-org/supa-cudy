@@ -1,5 +1,5 @@
 #
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -10,14 +10,14 @@ PKG_VERSION:=0.4.0
 PKG_RELEASE:=5
 
 PKG_LICENSE:=Apache-2.0
-PKG_MAINTAINER:=SupaCudy contributors
+PKG_MAINTAINER:=Supa Cudy contributors
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/supacudy-base
   SECTION:=supacudy
   CATEGORY:=SupaCudy
-  TITLE:=SupaCudy base system integration
+  TITLE:=Supa Cudy base system integration
   PKGARCH:=all
   DEPENDS:=+uhttpd +uhttpd-mod-ubus +rpcd +ucode +ucode-mod-fs +ucode-mod-uci +ucode-mod-ubus +ucode-mod-nl80211 +nftables +conntrack
   # USB tethering. Kernel modules go in EXTRA_DEPENDS so the SDK records them
@@ -27,7 +27,7 @@ endef
 
 define Package/supacudy-base/description
   First-boot defaults, version information and glue scripts shared by
-  the SupaCudy web UI and its rpcd plugin.
+  the Supa Cudy web UI and its rpcd plugin.
 endef
 
 define Package/supacudy-base/conffiles

@@ -1,8 +1,8 @@
-# 给 Cudy TR3000（256MB）刷入 SupaCudy
+# 给 Cudy TR3000（256MB）刷入 Supa Cudy
 
 离线可读的刷机步骤。刷机过程中电脑多半上不了网，请先把这份文档和下面"准备"里的文件都放在电脑本地。
 
-> 只适用于 **TR3000 v1 256MB 闪存版**。128MB 版的镜像不通用，SupaCudy 也不支持。刷错型号的固件会被拒绝，不会变砖。
+> 只适用于 **TR3000 v1 256MB 闪存版**。128MB 版的镜像不通用，Supa Cudy 也不支持。刷错型号的固件会被拒绝，不会变砖。
 
 ## 总览
 
@@ -10,15 +10,15 @@
 |---|---|---|---|
 | 开始 | Cudy 原厂系统 | http://192.168.10.1 | 默认密码 `admin`（或你设置过的密码） |
 | 第 2 步之后 | OpenWrt 过渡固件（Cudy 提供） | http://192.168.1.1 | 用户 `root`，无密码 |
-| 第 4 步之后 | SupaCudy | http://192.168.200.1 | 用户 `root`，密码 `supacudy` |
+| 第 4 步之后 | Supa Cudy | http://192.168.200.1 | 用户 `root`，密码 `supacudy` |
 
-顺序：确认型号和批次 → 准备救砖包 → 刷过渡固件 → **备份分区** → 刷 SupaCudy。
+顺序：确认型号和批次 → 准备救砖包 → 刷过渡固件 → **备份分区** → 刷 Supa Cudy。
 
 ## 第 0 步：确认型号和批次
 
 1. **闪存容量**：看包装盒或机身标签，必须是 256MB 版。
 2. **批次**：看序列号（SN）前 4 位。Cudy 说从 `2543` 起（下载页另写为 `2544`，即 2025 年第 44 周起）换用了新闪存 F50L1G41LC。
-   - OpenWrt 从 24.10.5 起支持这颗闪存；SupaCudy 基于 24.10.8，没有问题。
+   - OpenWrt 从 24.10.5 起支持这颗闪存；Supa Cudy 基于 24.10.8，没有问题。
    - 但旧版的 OpenWrt 过渡固件和旧版 OpenWrt 在新批次机器上**无法启动**。新批次只能用 2025-11-18 及之后的过渡固件。
 3. **不要先升级原厂固件。** 有 256MB 版用户把原厂固件升级到 2.5.21（2026-07）后再刷过渡固件，结果变砖。保持现有原厂版本直接进行下一步。如果你的机器已经是很新的原厂版本且属于新批次，先向 Cudy 客服确认过渡固件适用。
 
@@ -28,12 +28,12 @@
 |---|---|---|
 | **TR3000 256MB 原厂固件**，复制一份改名为 `recovery.bin` | 出问题时用 TFTP 恢复原厂 | Cudy 下载中心，TR3000-256MB 1.0 页面 |
 | **256MB 版 OpenWrt 过渡固件** `cudy_tr3000-256mb-v1-sysupgrade.bin` | 从原厂切到 OpenWrt | Cudy "OpenWrt Software Download" 页面，**"TR3000 256 MB Flash V1"** 文件夹 |
-| **SupaCudy 镜像** `openwrt-24.10.8-supacudy-mediatek-filogic-cudy_tr3000-256mb-v1-squashfs-sysupgrade.bin` | 最终系统 | 本仓库 `out/images/cudy-tr3000-256mb-v1/`（用 `scripts/build-image.sh cudy-tr3000-256mb-v1` 构建） |
+| **Supa Cudy 镜像** `openwrt-24.10.8-supacudy-mediatek-filogic-cudy_tr3000-256mb-v1-squashfs-sysupgrade.bin` | 最终系统 | 本仓库 `out/images/cudy-tr3000-256mb-v1/`（用 `scripts/build-image.sh cudy-tr3000-256mb-v1` 构建） |
 | TFTP 服务器（Windows 用 Tftpd32/Tftpd64，macOS 可用自带 tftpd） | 原厂 TFTP 恢复 | — |
 | 网线一根 | 刷机全程用有线 | — |
 | （可选）USB 转 TTL 串口，3.3V | 严重变砖时救砖，需要拆机 | — |
 
-核对 SupaCudy 镜像没有损坏（与同目录 `sha256sums` 里的值一致）：
+核对 Supa Cudy 镜像没有损坏（与同目录 `sha256sums` 里的值一致）：
 
 ```bash
 cd out/images/cudy-tr3000-256mb-v1 && shasum -a 256 -c sha256sums
@@ -79,11 +79,11 @@ mkdir -p ~/tr3000-backup && scp -O 'root@192.168.1.1:/tmp/bak/*' ~/tr3000-backup
 
 > **不要做** OpenWrt 网站上"换 U-Boot（ubootmod）"的步骤：那只针对 128MB 版。256MB 版保留原厂 U-Boot，才能继续使用原厂的 TFTP 恢复。
 
-## 第 4 步：刷 SupaCudy
+## 第 4 步：刷 Supa Cudy
 
 1. 在 http://192.168.1.1 的 LuCI 里打开"系统 → 备份/刷写固件"（System → Backup / Flash Firmware）。
-2. 在"刷写新固件"处选择 SupaCudy 镜像，点"刷写镜像"。
-3. 在确认页**取消勾选"保留配置"**（Keep settings），确认刷写。不保留配置，SupaCudy 的出厂默认值才会生效。
+2. 在"刷写新固件"处选择 Supa Cudy 镜像，点"刷写镜像"。
+3. 在确认页**取消勾选"保留配置"**（Keep settings），确认刷写。不保留配置，Supa Cudy 的出厂默认值才会生效。
 4. 等待约 3 分钟（首次启动要初始化 AdGuard Home 等组件），期间不要断电。
 
 刷完后：
@@ -92,7 +92,7 @@ mkdir -p ~/tr3000-backup && scp -O 'root@192.168.1.1:/tmp/bak/*' ~/tr3000-backup
 - 打开 http://192.168.200.1 ，用户名 `root`、密码 `supacudy` 登录。首次设置向导会要求设置新密码（不能用出厂密码），这个密码同时用于 SSH 和 AdGuard Home。
 - 原生 OpenWrt（LuCI）在 http://192.168.200.1/cgi-bin/luci/ 。
 
-以后升级 SupaCudy：在"维护"页上传新的 `*-squashfs-sysupgrade.bin` 即可。
+以后升级 Supa Cudy：在"维护"页上传新的 `*-squashfs-sysupgrade.bin` 即可。
 
 ## 救砖
 
@@ -100,7 +100,7 @@ mkdir -p ~/tr3000-backup && scp -O 'root@192.168.1.1:/tmp/bak/*' ~/tr3000-backup
 
 ### 能进系统，但设置出问题
 
-- 在 SupaCudy 的"维护"页恢复出厂设置。
+- 在 Supa Cudy 的"维护"页恢复出厂设置。
 - 或进入 OpenWrt 的 failsafe 模式：开机时看到指示灯快闪的几秒内按一下 Reset 键，之后网线连接，电脑设为 192.168.1.2/24，`ssh root@192.168.1.1`，可执行 `firstboot -y && reboot` 清空配置。
 
 ### 进不了系统：用原厂 TFTP 恢复刷回原厂

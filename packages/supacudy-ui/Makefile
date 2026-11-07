@@ -1,5 +1,5 @@
 #
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -10,20 +10,20 @@ PKG_VERSION:=0.4.0
 PKG_RELEASE:=3
 
 PKG_LICENSE:=Apache-2.0
-PKG_MAINTAINER:=SupaCudy contributors
+PKG_MAINTAINER:=Supa Cudy contributors
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/supacudy-ui
   SECTION:=supacudy
   CATEGORY:=SupaCudy
-  TITLE:=SupaCudy web UI
+  TITLE:=Supa Cudy web UI
   PKGARCH:=all
   DEPENDS:=+supacudy-rpcd +uhttpd +uhttpd-mod-ubus
 endef
 
 define Package/supacudy-ui/description
-  Pre-built static files of the SupaCudy web interface, served by uhttpd
+  Pre-built static files of the Supa Cudy web interface, served by uhttpd
   under /supacudy/ and opened at the router's root address.
 endef
 

@@ -1,5 +1,5 @@
 #!/bin/sh /etc/rc.common
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 # After the firewall (19), so fw4 does not flush the tables on its start.

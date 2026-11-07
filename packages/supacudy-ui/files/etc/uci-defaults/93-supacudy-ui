@@ -1,8 +1,8 @@
 #!/bin/sh
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
-# http://router/ opens SupaCudy instead of LuCI. uhttpd tries the index
+# http://router/ opens Supa Cudy instead of LuCI. uhttpd tries the index
 # names in order in every directory, so /www/supacudy-start.html wins at
 # the top while LuCI's /www/index.html stays untouched for upgrades.
 

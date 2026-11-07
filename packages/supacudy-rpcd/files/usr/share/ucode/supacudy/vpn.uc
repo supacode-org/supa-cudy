@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 //
 // VPN client (WireGuard or OpenVPN): saved profiles, one of which can be
@@ -337,7 +337,7 @@ function apply_firewall(cur) {
 		cur.set('firewall', ZONE, 'masq6', ipv6 ? '1' : '0');
 	if (active && !ipv6 && route_mode(cur) == 'all') {
 		cur.set('firewall', NO_IPV6_RULE, 'rule');
-		cur.set('firewall', NO_IPV6_RULE, 'name', 'SupaCudy VPN: no IPv6 outside the tunnel');
+		cur.set('firewall', NO_IPV6_RULE, 'name', 'Supa Cudy VPN: no IPv6 outside the tunnel');
 		cur.set('firewall', NO_IPV6_RULE, 'src', 'lan');
 		cur.set('firewall', NO_IPV6_RULE, 'dest', 'wan');
 		cur.set('firewall', NO_IPV6_RULE, 'family', 'ipv6');
@@ -355,7 +355,7 @@ function apply_firewall(cur) {
 		(d) => substr(d, 0, 1) != '/' && !(d in uplink));
 	if (kill && length(vpn_dns)) {
 		cur.set('firewall', DNS_TUNNEL_RULE, 'rule');
-		cur.set('firewall', DNS_TUNNEL_RULE, 'name', 'SupaCudy VPN: DNS only through the tunnel');
+		cur.set('firewall', DNS_TUNNEL_RULE, 'name', 'Supa Cudy VPN: DNS only through the tunnel');
 		cur.set('firewall', DNS_TUNNEL_RULE, 'dest', 'wan');
 		cur.set('firewall', DNS_TUNNEL_RULE, 'dest_ip', vpn_dns);
 		cur.set('firewall', DNS_TUNNEL_RULE, 'proto', 'tcp udp');
@@ -366,7 +366,7 @@ function apply_firewall(cur) {
 	}
 	if (kill && allow_lan) {
 		cur.set('firewall', ALLOW_LAN_RULE, 'rule');
-		cur.set('firewall', ALLOW_LAN_RULE, 'name', 'SupaCudy VPN: upstream network');
+		cur.set('firewall', ALLOW_LAN_RULE, 'name', 'Supa Cudy VPN: upstream network');
 		cur.set('firewall', ALLOW_LAN_RULE, 'src', 'lan');
 		cur.set('firewall', ALLOW_LAN_RULE, 'dest', 'wan');
 		cur.set('firewall', ALLOW_LAN_RULE, 'dest_ip', PRIVATE_RANGES);

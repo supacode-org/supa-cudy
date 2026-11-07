@@ -1,11 +1,11 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 //
 // Login protection: an address with supacudy.guard.attempts failed logins
 // within guard.window minutes cannot reach the router's management (SSH,
 // web UI, LuCI, AdGuard Home) for guard.ban minutes. Forwarding, DNS and
 // DHCP stay open to it. Failures are read from the log: dropbear, LuCI,
-// AdGuard Home and the SupaCudy login CGI all name the address.
+// AdGuard Home and the Supa Cudy login CGI all name the address.
 //
 //   ucode login-guard.uc        set up the firewall table, then follow the log
 //   ucode login-guard.uc stop   remove the table, lifting every ban

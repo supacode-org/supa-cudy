@@ -1,10 +1,10 @@
-# SupaCudy
+# Supa Cudy
 
 简体中文 | [English](README.en.md)
 
-![SupaCudy 概览页，运行在 Cudy TR3000 上](docs/images/overview.webp)
+![Supa Cudy 概览页，运行在 Cudy TR3000 上](docs/images/overview.webp)
 
-SupaCudy 是基于 OpenWrt 24.10 的 Cudy TR3000 固件，提供简洁易用的管理页面，同时保留 LuCI。
+Supa Cudy 是基于 OpenWrt 24.10 的 Cudy TR3000 固件，提供简洁易用的管理页面，同时保留 LuCI。
 
 ## 功能
 
@@ -35,7 +35,7 @@ SupaCudy 是基于 OpenWrt 24.10 的 Cudy TR3000 固件，提供简洁易用的�
 
 ## 刷机
 
-完整步骤、备份和救砖方法见 [docs/hardware/flashing-tr3000.md](docs/hardware/flashing-tr3000.md)。简要流程：原厂固件 → Cudy 提供的 OpenWrt 过渡固件 → 备份分区 → 刷入 SupaCudy（不保留配置）。
+完整步骤、备份和救砖方法见 [docs/hardware/flashing-tr3000.md](docs/hardware/flashing-tr3000.md)。简要流程：原厂固件 → Cudy 提供的 OpenWrt 过渡固件 → 备份分区 → 刷入 Supa Cudy（不保留配置）。
 
 刷完后：
 
@@ -57,7 +57,7 @@ SupaCudy 是基于 OpenWrt 24.10 的 Cudy TR3000 固件，提供简洁易用的�
 
 - 刷写第三方固件存在风险，请在操作前自行备份重要数据。因使用本项目造成的任何后果，包括但不限于数据丢失、设备损坏或无法启动、失去保修，均由使用者自行承担，项目作者和贡献者不承担任何责任。
 - 本项目仅供技术交流和学习使用，禁止用于任何违法用途。使用者须遵守所在地的法律法规，包括无线电管理、网络安全和数据保护等方面的规定。
-- SupaCudy 是独立的社区项目，与 Cudy、GL.iNet 及 OpenWrt 项目均无关联，也未获得其认可。相关名称和商标归各自所有者。
+- Supa Cudy 是独立的社区项目，与 Cudy、GL.iNet 及 OpenWrt 项目均无关联，也未获得其认可。相关名称和商标归各自所有者。
 
 ## 许可证
 

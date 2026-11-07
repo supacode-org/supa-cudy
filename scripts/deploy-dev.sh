@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
-# Push the SupaCudy files straight onto a running OpenWrt router, without
+# Push the Supa Cudy files straight onto a running OpenWrt router, without
 # building or flashing an image. Meant for the edit -> reload loop.
 #
 #   scripts/deploy-dev.sh [user@host]      (default: root@192.168.1.1)

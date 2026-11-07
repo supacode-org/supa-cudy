@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 //
 // Inbound access from the internet: port forwards (fw4 "redirect" sections,
@@ -248,7 +248,7 @@ function dmz_set(req) {
 	if (!on_lan(cur, a.ip))
 		return fail('not_lan');
 	cur.set('firewall', DMZ, 'redirect');
-	cur.set('firewall', DMZ, 'name', 'SupaCudy DMZ');
+	cur.set('firewall', DMZ, 'name', 'Supa Cudy DMZ');
 	cur.set('firewall', DMZ, 'target', 'DNAT');
 	cur.set('firewall', DMZ, 'src', 'wan');
 	cur.set('firewall', DMZ, 'dest', 'lan');
@@ -265,8 +265,8 @@ const FORWARD_ARGS = { id: '', name: '', proto: '', external_port: '', internal_
 // created on first boot (90-supacudy in supacudy-base): the web UI open,
 // SSH closed. A missing rule counts as closed.
 const WAN_ACCESS = {
-	webui: { section: 'supacudy_wan_webui', name: 'SupaCudy: web UI from the WAN', ports: '80 443' },
-	ssh: { section: 'supacudy_wan_ssh', name: 'SupaCudy: SSH from the WAN', ports: '22' }
+	webui: { section: 'supacudy_wan_webui', name: 'Supa Cudy: web UI from the WAN', ports: '80 443' },
+	ssh: { section: 'supacudy_wan_ssh', name: 'Supa Cudy: SSH from the WAN', ports: '22' }
 };
 
 function wan_access_get() {

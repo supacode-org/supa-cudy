@@ -1,4 +1,4 @@
-// Copyright 2026 SupaCudy contributors
+// Copyright 2026 Supa Cudy contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import { PASSWORD, expect, expectPageQuality, login, loginAndWait, messages, projectLocale, test } from './helpers';
@@ -37,7 +37,7 @@ test.describe('login', () => {
 
   test('opens the overview after a correct password', async ({ page }, testInfo) => {
     await loginAndWait(page, testInfo);
-    await expect(page).toHaveTitle(`${messages(testInfo).overview.title} · SupaCudy`);
+    await expect(page).toHaveTitle(`${messages(testInfo).overview.title} · Supa Cudy`);
   });
 
   test('keeps the session across a reload but not in localStorage', async ({ page }, testInfo) => {

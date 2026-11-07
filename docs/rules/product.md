@@ -3,7 +3,7 @@
 ## Positioning
 
 - For people who do not want to tinker with OpenWrt: common tasks (internet, repeater, VPN, Wi-Fi, clients) take a few taps.
-- LuCI stays installed as the "advanced settings" escape hatch. SupaCudy covers frequent tasks, not every OpenWrt option.
+- LuCI stays installed as the "advanced settings" escape hatch. Supa Cudy covers frequent tasks, not every OpenWrt option.
 - We learn from the **interaction design and feature layout** of similar products, but never copy any vendor's code, icons, logos, illustrations or copy.
 
 ## Desktop and mobile
@@ -40,7 +40,7 @@
 - **One password for everything with a login** (Unified Password): SSH, the web UI, AdGuard Home's own page and any login added later all use user `root` with the admin password. Wi-Fi and VPN credentials are separate.
 - Factory login: user `root`, password `supacudy`. The login page shows it only until setup is done, and the setup wizard requires a new password (the factory one is refused).
 - **Login protection** is on by default: an address with 3 failed logins (any of them) within 30 minutes cannot reach the management services for 120 minutes, while its internet access keeps working. The web UI logs in through `/cgi-bin/supacudy-login`, never through anonymous `session.login` on `/ubus`, so every failure is counted with the caller's address.
-- Changing the admin password in SupaCudy updates every login at once. A change made outside SupaCudy (`passwd`, LuCI) is detected, and the UI asks for the password once to bring the others in line.
+- Changing the admin password in Supa Cudy updates every login at once. A change made outside Supa Cudy (`passwd`, LuCI) is detected, and the UI asks for the password once to bring the others in line.
 
 ## Glossary
 

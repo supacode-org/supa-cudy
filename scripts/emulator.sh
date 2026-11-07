@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
-# Run SupaCudy in a QEMU virtual machine with an emulated network around it
+# Run Supa Cudy in a QEMU virtual machine with an emulated network around it
 # (see docs/emulator.md).
 #
 #   scripts/emulator.sh build      build packages and the emulator image
@@ -36,7 +36,7 @@ IMAGE_GZ="$ROOT/out/images/emulator/openwrt-${OPENWRT_VERSION}-supacudy-armsr-ar
 KEY="$ROOT/out/emulator/id_ed25519"
 HTTP_PORT="${EMU_HTTP_PORT:-8088}"
 SSH_PORT="${EMU_SSH_PORT:-2222}"
-# AdGuard Home's own page, linked from SupaCudy on the same host name.
+# AdGuard Home's own page, linked from Supa Cudy on the same host name.
 ADGUARD_PORT="${EMU_ADGUARD_PORT:-3000}"
 URL="http://127.0.0.1:$HTTP_PORT/supacudy/"
 

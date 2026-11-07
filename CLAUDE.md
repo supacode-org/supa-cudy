@@ -1,4 +1,4 @@
-# SupaCudy
+# Supa Cudy
 
 Firmware for the Cudy TR3000 built on official OpenWrt, with a mobile-first web UI. See [docs/architecture.md](docs/architecture.md) for the architecture and [docs/development.md](docs/development.md) for the development workflow.
 

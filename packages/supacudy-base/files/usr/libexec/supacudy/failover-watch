@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 
 # Every 10 s: a dead uplink is noticed within three checks (about 30 s).

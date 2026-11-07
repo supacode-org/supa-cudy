@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright 2026 SupaCudy contributors
+# Copyright 2026 Supa Cudy contributors
 # SPDX-License-Identifier: Apache-2.0
 #
 # Runs once on first boot (and after installing the package).
@@ -18,7 +18,7 @@ fi
 
 # Reaching the router from the WAN side: the web UI open, SSH closed. Kept
 # as they are once they exist (the Settings page switches them).
-for spec in 'webui:80 443:1:SupaCudy: web UI from the WAN' 'ssh:22:0:SupaCudy: SSH from the WAN'; do
+for spec in 'webui:80 443:1:Supa Cudy: web UI from the WAN' 'ssh:22:0:Supa Cudy: SSH from the WAN'; do
 	key=${spec%%:*}; rest=${spec#*:}
 	ports=${rest%%:*}; rest=${rest#*:}
 	enabled=${rest%%:*}; name=${rest#*:}

@@ -1,10 +1,10 @@
-# SupaCudy
+# Supa Cudy
 
 [简体中文](README.md) | English
 
-![The SupaCudy overview page on a Cudy TR3000](docs/images/overview.webp)
+![The Supa Cudy overview page on a Cudy TR3000](docs/images/overview.webp)
 
-SupaCudy is an OpenWrt 24.10 based firmware for the Cudy TR3000 with a simple, easy-to-use web interface. LuCI remains available.
+Supa Cudy is an OpenWrt 24.10 based firmware for the Cudy TR3000 with a simple, easy-to-use web interface. LuCI remains available.
 
 ## Features
 
@@ -35,7 +35,7 @@ The 128MB flash version is not supported; images for the two are not interchange
 
 ## Installation
 
-The full steps, backups and recovery are in [docs/hardware/flashing-tr3000.md](docs/hardware/flashing-tr3000.md) (Chinese). In short: stock firmware → Cudy's OpenWrt bridge firmware → back up the partitions → flash SupaCudy without keeping settings.
+The full steps, backups and recovery are in [docs/hardware/flashing-tr3000.md](docs/hardware/flashing-tr3000.md) (Chinese). In short: stock firmware → Cudy's OpenWrt bridge firmware → back up the partitions → flash Supa Cudy without keeping settings.
 
 After flashing:
 
@@ -59,7 +59,7 @@ The documentation is in Chinese.
 
 - Flashing third-party firmware is risky. Back up your important data before you start. You use this project at your own risk: the authors and contributors are not liable for any consequences, including but not limited to data loss, a damaged or unbootable device, or a voided warranty.
 - This project is for technical exchange and learning only and must not be used for any illegal purpose. You are responsible for complying with the laws and regulations where you live, including those on radio equipment, network security and data protection.
-- SupaCudy is an independent community project. It is not affiliated with or endorsed by Cudy, GL.iNet or the OpenWrt project. Names and trademarks belong to their respective owners.
+- Supa Cudy is an independent community project. It is not affiliated with or endorsed by Cudy, GL.iNet or the OpenWrt project. Names and trademarks belong to their respective owners.
 
 ## License
 
